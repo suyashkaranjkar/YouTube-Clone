@@ -1,0 +1,137 @@
+	.thumbnail {
+		width: 100%;
+	}
+
+	.video-title {
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 20px;
+		margin-bottom: 10px;
+	}
+
+		.video-title-link {
+		text-decoration: none;
+		color: black;
+		}
+	
+  .video-info-grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+
+  	.channel-picture {
+		display: inline-block;
+		position: relative;
+	}
+
+	.profile-picture {
+		width: 36px;
+		border-radius: 50px;
+	}
+
+	.thumbnail-row {
+		margin-bottom: 8px;
+		position: relative;
+	}
+
+	.video-author,
+	.video-stats {
+		font-size: 12px;
+		color: rgb(96, 96, 96);
+	}
+
+	.video-author {
+		margin-bottom: 4px;
+	}
+	
+  .video-grid {
+	font-family: roboto, arial;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+  }
+
+  	@media (max-width: 800px) {
+		.video-grid {
+			grid-template-columns: 1fr 1fr;
+		}
+	}
+
+	@media (max-width: 801px) and (min-width: 1099px) {
+		.video-grid {
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+	}
+
+	@media (min-width: 1100px) {
+		.video-grid {
+			grid-template-columns: 1fr 1fr 1fr 1fr;
+		}
+	}
+
+.absolute-style {
+	font-size: 12px;
+	padding: 4px;
+	border-radius: 3px;
+	font-weight: 500;
+	background-color: black;
+	color: white;
+	position: absolute;
+	right: 6px;
+	bottom: 10px;
+	z-index: 0;
+}
+
+.channel-picture .channel-picture-tooltip {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	flex-direction: row;
+	position: absolute;
+	align-items: center;
+	justify-content: center;
+	padding-top: 12px;
+	padding-bottom: 12px;
+	padding-left: 12px;
+	padding-right: 12px;
+	border: none;
+	border-radius: 6px;
+	box-shadow: 2px 3px 10px rgba(0, 0, 0, 0.5);
+	z-index: 100;
+	opacity: 0;
+	transition: opacity 0.15s;
+	pointer-events: none;
+	white-space: nowrap
+}
+
+	.profile-picture-tooltip {
+		width: 50px;
+		height: 50px;
+		object-fit: cover;
+		border-radius: 25px;
+		margin-right: 8px;
+	}
+
+	.video-author-stats-tooltip {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.video-author-tooltip {
+		display: block;
+		font-family: roboto, arial;
+		font-size: 18px;
+		font-weight: 500;
+		color: black;
+	}
+
+	.video-stats-tooltip {
+		display: block;
+		font-family: roboto, arial;
+		font-size: 16px;
+		color: rgb(96, 96, 96);
+	}
+
+	.channel-picture:hover .channel-picture-tooltip {
+		opacity: 1;
+	}
